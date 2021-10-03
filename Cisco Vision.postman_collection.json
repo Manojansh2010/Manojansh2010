@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "084d373b-a163-46b1-b439-970bd47a4073",
+		"name": "Cisco Vision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetJourneySchedule",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ccp",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ccp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"VisitDate\": \"2020-05-17\",\n\t\"PageSize\": 10,\n\t\"PageNumber\":1,\n\t\"JourneyType\": \"S\"\n}"
+				},
+				"url": {
+					"raw": "https://10.0.121.6:85/ipsc/signage/v1/GetJourneySchedule",
+					"protocol": "https",
+					"host": [
+						"10",
+						"0",
+						"121",
+						"6"
+					],
+					"port": "85",
+					"path": [
+						"ipsc",
+						"signage",
+						"v1",
+						"GetJourneySchedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJourneyDeparture",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ccp",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ccp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"VisitDate\": \"2020-05-20\",\n\t\"PageSize\": 10000,\n\t\"PageNumber\":1,\n\t\"Gate\": \"S\"\n}"
+				},
+				"url": {
+					"raw": "https://10.0.121.6:85/ipsc/signage/v1/GetJourneyDeparture",
+					"protocol": "https",
+					"host": [
+						"10",
+						"0",
+						"121",
+						"6"
+					],
+					"port": "85",
+					"path": [
+						"ipsc",
+						"signage",
+						"v1",
+						"GetJourneyDeparture"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
